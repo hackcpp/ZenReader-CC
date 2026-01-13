@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZenReader</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <h1>ZenReader</h1>
+
+  <div class="section">
+    <div class="section-title">主题</div>
+    <div class="theme-grid">
+      <button class="theme-btn theme-white active" data-theme="white" title="白色主题"></button>
+      <button class="theme-btn theme-sepia" data-theme="sepia" title="米色主题"></button>
+      <button class="theme-btn theme-dark" data-theme="dark" title="深色主题"></button>
+      <button class="theme-btn theme-green" data-theme="green" title="护眼绿主题"></button>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <button class="reader-toggle disabled" id="reader-toggle">
+    开启阅读模式
+  </button>
+
+  <div class="status" id="status" style="display: none;"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
