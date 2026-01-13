@@ -19,7 +19,7 @@ This is a Chrome Extension (Manifest V3) - no build step required. Load the exte
 
 **Data Flow:**
 ```
-Popup (theme/font controls) ↔ Background Script ↔ Content Script ↔ Shadow DOM Reader
+Popup (theme controls) ↔ Background Script ↔ Content Script ↔ Shadow DOM Reader
                                           ↓
                                chrome.storage.local (persistence)
 ```
@@ -29,14 +29,14 @@ Popup (theme/font controls) ↔ Background Script ↔ Content Script ↔ Shadow 
 - `background/background.js` - Message broker between popup and content scripts
 - `content/content.js` - Creates Shadow DOM reader, loads Readability.js, handles theme updates
 - `popup/popup.js` - UI controls, sends messages to toggle reader mode and change themes
-- `styles/reader.css` - Reader styling with CSS variables (`--bg-color`, `--text-color`, `--font-size`)
+- `styles/reader.css` - Reader styling with CSS variables (`--bg-color`, `--text-color`)
 
 **Communication:**
 - `chrome.runtime.sendMessage` / `chrome.runtime.onMessage` for cross-context messaging
-- `chrome.storage.local` for user preferences (theme, font size)
+- `chrome.storage.local` for user preferences (theme)
 
 **Presets:**
 - White: `#FFFFFF` bg, `#333333` text
-- Beige: `#F5F5DC` bg, `#2C2C2C` text
+- Sepia: `#F5F5DC` bg, `#2C2C2C` text
 - Dark: `#1E1E1E` bg, `#E0E0E0` text
 - Green: `#C7EDCC` bg, `#2C2C2C` text
