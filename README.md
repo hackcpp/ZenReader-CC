@@ -5,8 +5,7 @@ A clean reading mode Chrome extension that extracts article content and provides
 ## Features
 
 - **Article Extraction**: Uses Mozilla's Readability.js to extract clean article content from any webpage
-- **Theme Options**: Choose from 4 preset themes (White, Beige, Dark, Eye-protect Green)
-- **Font Size Control**: Adjustable font size for comfortable reading
+- **Theme Options**: Choose from 4 preset themes (White, Sepia, Dark, Green)
 - **Style Isolation**: Shadow DOM ensures reader styles don't conflict with page styles
 - **Persistent Settings**: Your preferences are saved automatically
 
@@ -22,17 +21,14 @@ A clean reading mode Chrome extension that extracts article content and provides
 1. Visit any article page
 2. Click the ZenReader extension icon in the toolbar
 3. Click "Enter Reader Mode" to extract and display the article
-4. Use the popup to:
-   - Switch between themes
-   - Adjust font size
-   - Exit reader mode
+4. Use the popup to switch themes or exit reader mode
 
 ## Themes
 
 | Theme | Background | Text |
 |-------|------------|------|
 | White | `#FFFFFF` | `#333333` |
-| Beige | `#F5F5DC` | `#2C2C2C` |
+| Sepia | `#F5F5DC` | `#2C2C2C` |
 | Dark | `#1E1E1E` | `#E0E0E0` |
 | Green | `#C7EDCC` | `#2C2C2C` |
 
@@ -84,5 +80,5 @@ No build step required. Changes take effect immediately after reloading the exte
 ## Permissions
 
 - `activeTab`: Access the current tab when extension is clicked
-- `storage`: Persist user preferences (theme, font size)
+- `storage`: Persist user preferences (theme)
 - `<all_urls>`: Required to run on all web pages
