@@ -29,7 +29,7 @@
 ## 技术架构
 
 * **Manifest V3**: Chrome 扩展配置文件
-* **Readability.js**: 从 Mozilla CDN 动态加载，提取网页文章内容
+* **Readability.js**: 从 Mozilla CDN 下载保存在本地，提取网页文章内容
 * **Shadow DOM**: 创建样式隔离的阅读容器
 * **chrome.storage.local**: 用户偏好持久化存储
 
@@ -57,4 +57,22 @@ Content Script 更新 CSS 变量
 保存设置到 chrome.storage.local
 ```
 
+## 项目结构
 
+```javascript
+项目根目录/
+├── manifest.json             # Manifest V3 配置文件
+├── background/
+│   └── background.js         # Background Script（消息中转）
+├── content/
+│   ├── content.js            # Content Script（主逻辑）
+│   └── readability.js        # Readability.js 库（CDN引入的本地副本）
+├── popup/
+│   ├── popup.html            # Popup 界面
+│   ├── popup.js              # Popup 逻辑
+│   └── popup.css             # Popup 样式
+├── styles/
+│   └── reader.css            # 阅读器样式（Shadow DOM内使用）
+└── icons/
+    └── icon-*.png            # 插件图标
+```
